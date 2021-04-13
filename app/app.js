@@ -24,18 +24,18 @@ function generateNewCardElement() {
   info1.classList.add('info-1');
   newCardWrap.appendChild(info1);
 
-  const img = document.createElement('img');
+  const img = document.createElement('div');
   img.classList.add('img');
   info1.appendChild(img);
 
   const icon = document.createElement('i');
-  icon.classList.add('img-icon'); //Cant add fas fa-user-plus fa-2x 
+  icon.classList.add('fas', 'fa-user-alt', 'fa-2x', 'img-icon'); //<i class="fas fa-user-alt"></i>
   img.appendChild(icon);
 
   const personeName = document.createElement('p');
   personeName.classList.add('new-card-persone-name');
   // ----------------------!
-  info1.innerText = inputName.value;
+  personeName.innerText = inputName.value;
   // ----------------------!
   info1.appendChild(personeName)
 
@@ -65,7 +65,7 @@ function generateNewCardElement() {
   info2ContentDiv1.appendChild(iconDiv1);
 
   const iconDiv1Icon = document.createElement('i');
-  iconDiv1Icon.classList.add('new-card-icons'); // Cant add fontawesome
+  iconDiv1Icon.classList.add('fas', 'fa-envelope', 'new-card-icons');
   iconDiv1.appendChild(iconDiv1Icon);
 
   // Named icon but inside p
@@ -91,7 +91,7 @@ function generateNewCardElement() {
   info2ContentDiv2.appendChild(info2Div1);
 
   const info2Div1Icon = document.createElement('i');
-  info2Div1Icon.classList.add('new-card-icons'); //Fontawesome 
+  info2Div1Icon.classList.add('fas', 'fa-mobile', 'new-card-icons');
   info2Div1.appendChild(info2Div1Icon);
 
   const info2Div2 = document.createElement('div');
@@ -116,7 +116,7 @@ function generateNewCardElement() {
   info3ContentDiv3.appendChild(info3Div1);
 
   const info3Div1Icon = document.createElement('p');
-  info3Div1Icon.classList.add('new-card-icons'); //Fontawesome
+  info3Div1Icon.classList.add('fas', 'fa-map-marked-alt', 'new-card-icons'); //Fontawesome
   info3Div1.appendChild(info3Div1Icon);
 
   const info3Div2 = document.createElement('div');
