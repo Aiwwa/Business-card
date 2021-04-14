@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(184, 172, 133);
 }
 
 /* Form classes */
@@ -99,9 +100,6 @@ body {
 .info-2 {
   display: flex;
   align-items: flex-start;
-}
-
-.info {
 }
 
 .info-2-content {
