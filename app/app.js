@@ -1,4 +1,5 @@
-const body = document.querySelector('body')
+const body = document.querySelector('body');
+const generateNewCardBtn = document.querySelector('.create-new-card');
 
 const inputName = document.querySelector('.name input');
 const inputEmail = document.querySelector('.email input');
@@ -6,13 +7,28 @@ const inputPhone = document.querySelector('.phone input');
 const inputAddress = document.querySelector('.address input');
 const inputJob = document.querySelector('.job-services input');
 
-const generateNewCardBtn = document.querySelector('.create-new-card')
 
-generateNewCardBtn.addEventListener('click', () => {
-  generateNewCardElement()
+generateNewCardBtn.addEventListener('click', (event) => {
+  generateNewCardElement();
+  saveFormData();
+
+  event.preventDefault();
 })
 
-// Create new card element
+function saveFormData() {
+  const name = `${inputName.value}`;
+  const email = `${inputEmail.value}`;
+  const phone = `${inputPhone.value}`;
+  const address = `${inputAddress.value}`;
+  const job = `${inputJob.value}`;
+
+  localStorage.setItem('name', `${name})`);
+  localStorage.setItem('email', `${email}`);
+  localStorage.setItem('phone', `${phone}`);
+  localStorage.setItem('address', `${address}`);
+  localStorage.setItem('job', `${job}`);
+}
+
 function generateNewCardElement() {
 
   const newCardWrap = document.createElement('div');
@@ -131,5 +147,6 @@ function generateNewCardElement() {
   info3Div2.appendChild(info3Div2Paragraph);
 
 }
+
 
 
