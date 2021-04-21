@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="app/app.js" defer></script>
+    <!-- <script src="app/app.js" defer></script> -->
+    <script src="app/app2.js" defer></script>
     <link rel="stylesheet" href="style/style.css" />
     <link
       rel="stylesheet"
@@ -29,7 +30,7 @@
           </div>
           <div class="phone">
             <label for="phone">Phone</label>
-            <input type="number" name="phone" id="number" />
+            <input type="tel" name="phone-number" id="phone-number" />
           </div>
           <div class="address">
             <label for="address">Address</label>
@@ -39,10 +40,12 @@
             <label for="job-services">Job/Services</label>
             <input type="text" name="job-services" id="job-services" />
           </div>
+          <div class="create-card-btn">
+            <button type="submit" class="create-new-card">Create card</button>
+          </div>
         </form>
-        <div class="create-card-btn">
-          <button type="submit" class="create-new-card">Create card</button>
-        </div>
+
+        <div id="output"></div>
       </div>
     </div>
   </body>
