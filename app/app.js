@@ -7,6 +7,9 @@ const inputPhone = document.querySelector('.phone input');
 const inputAddress = document.querySelector('.address input');
 const inputJob = document.querySelector('.job-services input');
 
+let cardData = {};
+
+
 
 generateNewCardBtn.addEventListener('click', (event) => {
   generateNewCardElement();
@@ -21,12 +24,6 @@ function saveFormData() {
   const phone = `${inputPhone.value}`;
   const address = `${inputAddress.value}`;
   const job = `${inputJob.value}`;
-
-  localStorage.setItem('name', `${name})`);
-  localStorage.setItem('email', `${email}`);
-  localStorage.setItem('phone', `${phone}`);
-  localStorage.setItem('address', `${address}`);
-  localStorage.setItem('job', `${job}`);
 }
 
 function generateNewCardElement() {
