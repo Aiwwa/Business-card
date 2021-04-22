@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardData = JSON.parse(savedData);
     render();
   }
+
 });
 
 
