@@ -1,10 +1,14 @@
+const DATA_KEY = 'cardData';
 let cardData = {};
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const savedData = 
-  cardData = JSON.parse(localStorage.getItem('cardData'));
-  render();
-})
+  const savedData = localStorage.getItem(DATA_KEY);
+
+  if (savedData) {
+    cardData = JSON.parse(savedData);
+    render();
+  }
+});
 
 
 function getInputValue(selector) {
@@ -23,7 +27,6 @@ function render() {
     element.textContent = text;
     container.appendChild(element);
   })
-
 
   // const name = document.createElement('p');
   // const email = document.createElement('p');
@@ -45,7 +48,6 @@ function render() {
 
   output.innerHTML = '';
   output.appendChild(container);
-
 }
 
 document.querySelector('#form').addEventListener('submit', event => {
@@ -59,7 +61,7 @@ document.querySelector('#form').addEventListener('submit', event => {
     job: getInputValue('#job-services'),
   };
 
-  localStorage.setItem('cardData', JSON.stringify(cardData))
+  localStorage.setItem(DATA_KEY, JSON.stringify(cardData));
 
   render();
 });
